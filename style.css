@@ -1,0 +1,303 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(253, 211, 218);
+}
+
+/* Navbar */
+.navbar {
+    background: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.contact-info .phone:hover .icon,
+.contact-info .email:hover .icon {
+    animation: shake 0.5s ease-in-out;
+    animation-iteration-count: infinite; /* Makes it shake continuously */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info .phone,
+.contact-info .email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between each contact item */
+}
+
+.contact-info .icon {
+    width: 20px; /* Set your desired icon size */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgb(253, 211, 218);
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Quote Section */
+.quote-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.quote {
+    font-family: 'Lora', 'PT Serif', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 60%;
+}
+
+/* Main Content Layout */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    text-align: left;
+}
+
+/* Image */
+.hero .hero-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.hero .hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Text Content */
+.hero .hero-text {
+    flex: 2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Lora', 'PT Serif', serif;
+    font-weight: 100;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Watermark behind the text */
+.hero-text::before {
+    content: "";
+    background: url("assets/watermark.png") no-repeat center;
+    background-size: 700px;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Text Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Description Paragraph */
+.hero h2, .hero p {
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero .hero-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .quote {
+        width: 80%;
+    }
+
+    .hero .hero-image {
+        max-width: 100%;
+    }
+}
+
+/* Timeline Layout */
+.timeline-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensures they stay in one row */
+    align-items: flex-start;
+    width: 20%; /* Instead of 100%, to prevent wrapping */
+    max-width: 1200px; /* Keeps it within a reasonable width */
+    margin: auto; /* Centers the content */
+}
+
+
+/* Experience Timeline (Left Side) */
+#timeline {
+    flex: 2;
+    padding: 20px;
+}
+
+/* Timeline Styles */
+.hidden {
+    display: none;
+}
+
+/* Experience Timeline Styling */
+.timeline-line {
+    position: absolute;
+    left: 10%;
+    transform: translateX(-50%);
+    animation: growLine 5s linear forwards;
+}
+
+@keyframes growLine {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    width: 500px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating Placement */
+.timeline-item:nth-child(odd) {
+    left: 10%;
+}
+
+.timeline-item:nth-child(even) {
+    left: 10%;
+}
+
+/* Timeline Content Box */
+.timeline-content {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #800080;
+    margin-left: 20px;
+    animation: fadeInUp 1s ease-out forwards;
+
+}
+
+.timeline-content h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #800080;
+}
+
+.timeline-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    margin: 30px;
+}
+
+
+#education {
+        width: 30%; /* Adjust width to fit */
+        height: 100%;
+        position: fixed;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        top: 10%;
+        right: 6%;
+        background-color: white;
+        border-left: 3px solid purple;
+        padding: 30px;
+        text-align: left;
+        animation: fadeInUp 1s ease-out forwards;
+    }
