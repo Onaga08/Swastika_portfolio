@@ -43,6 +43,7 @@ body {
     color: #333;
     font-weight: bold;
 }
+
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -109,6 +110,7 @@ body {
     margin: auto;
     gap: 40px;
     text-align: left;
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
 }
 
 /* Image */
@@ -180,17 +182,33 @@ body {
         text-align: center;
     }
 
-    .hero .hero-text {
-        align-items: center;
-        text-align: center;
-    }
-
     .quote {
         width: 80%;
     }
 
     .hero .hero-image {
         max-width: 100%;
+    }
+
+    .hero .hero-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Timeline adjustments */
+    .timeline-page {
+        flex-direction: column; /* Stack timeline content */
+        align-items: center;
+    }
+
+    #education {
+        position: static;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 90%; /* Adjust width for mobile */
+        padding: 20px;
+        text-align: center;
+        border-left: none; /* Remove left border for mobile */
     }
 }
 
@@ -301,3 +319,4 @@ body {
         text-align: left;
         animation: fadeInUp 1s ease-out forwards;
     }
+
