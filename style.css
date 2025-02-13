@@ -17,9 +17,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -32,6 +33,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar nav ul li {
@@ -61,6 +63,7 @@ body {
 .contact-info {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .contact-info .phone,
@@ -106,7 +109,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     gap: 40px;
     text-align: left;
@@ -201,20 +204,12 @@ body {
         align-items: center;
     }
 
-    #education {
-        position: static;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        width: 90%; /* Adjust width for mobile */
-        padding: 20px;
-        text-align: center;
-        border-left: none; /* Remove left border for mobile */
-    }
 }
 
 /* Timeline Layout */
 .timeline-page {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between; /* Ensures they stay in one row */
     align-items: flex-start;
@@ -278,6 +273,7 @@ body {
     border-radius: 8px;
     border-left: 4px solid #800080;
     margin-left: 20px;
+    flex-wrap: wrap;
     animation: fadeInUp 1s ease-out forwards;
 
 }
@@ -308,6 +304,7 @@ body {
 #education {
         width: 30%; /* Adjust width to fit */
         height: 100%;
+        flex-wrap: wrap;
         position: fixed;
         margin-top: 50px;
         margin-bottom: 50px;

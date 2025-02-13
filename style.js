@@ -45,3 +45,43 @@ document.addEventListener("DOMContentLoaded", function () {
         experienceBtn.style.color = "black";  // Reset experience button color
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const educationSection = document.getElementById("education");
+
+    // Function to adjust the position based on screen width
+    function adjustEducationPosition() {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 1150) { 
+            // On mobile, make the position relative and below the timeline
+            educationSection.style.position = "relative";
+            educationSection.style.marginTop = "500px";  // Space it below the timeline
+            educationSection.style.marginBottom = "20px";  // Add some margin at the bottom
+            educationSection.style.top = "auto";  // Remove fixed top position
+            educationSection.style.right = "-3%";  // Remove fixed right position
+            educationSection.style.width = "90%";  // Make the width 90% for mobile
+            educationSection.style.padding = "20px";  // Adjust padding for mobile
+            educationSection.style.borderLeft = "3px solid purple";  // Remove left border for mobile
+            educationSection.style.textAlign = "center";  // Center text on mobile
+        } else {
+            // On desktop, keep the position fixed and styled for desktop
+            educationSection.style.position = "fixed";
+            educationSection.style.width = "30%";  // Width 30% for desktop
+            educationSection.style.marginTop = "50px";  // Spacing for desktop
+            educationSection.style.marginBottom = "50px";  // Spacing for desktop
+            educationSection.style.top = "10%";  // Keep it fixed at 10% top
+            educationSection.style.right = "6%";  // Fixed position on the right
+            educationSection.style.padding = "30px";  // Padding for desktop
+            educationSection.style.borderLeft = "3px solid purple";  // Keep border for desktop
+            educationSection.style.textAlign = "left";  // Left-align text for desktop
+        }
+    }
+
+    // Adjust the position when the page loads
+    adjustEducationPosition();
+
+    // Re-check the position when the window is resized
+    window.addEventListener("resize", adjustEducationPosition);
+});
