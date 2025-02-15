@@ -300,6 +300,15 @@ body {
     left: -10px;
     margin: 30px;
 }
+@media only screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+    body {
+        background-color: lightblue;
+    }
+    .timeline-item{
+        width: 80%;
+    }
+}
 
 
 #education {
