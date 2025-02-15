@@ -251,7 +251,7 @@ body {
 /* Timeline Items */
 .timeline-item {
     position: relative;
-    width: calc(40vw - 20px);
+    width: 500px;
     padding: 10px;
     background: white;
     border-radius: 10px;

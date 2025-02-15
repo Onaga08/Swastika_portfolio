@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const educationSection = document.getElementById("education");
+    const timeline_content = document.getElementsByClassName("timeline-content");
 
     // Function to adjust the position based on screen width
     function adjustEducationPosition() {
@@ -65,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             educationSection.style.padding = "20px";  // Adjust padding for mobile
             educationSection.style.borderLeft = "3px solid purple";  // Remove left border for mobile
             educationSection.style.textAlign = "center";  // Center text on mobile
+            timeline_content.style.width = "250px";
         } else {
             // On desktop, keep the position fixed and styled for desktop
             educationSection.style.position = "fixed";
