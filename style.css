@@ -306,6 +306,9 @@ body {
     body {
         background-color: lightblue;
     }
+    .timeline-item{
+        width: 85%;
+    }
 
 }
 .phone{
