@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             educationSection.style.marginBottom = "20px";  // Add some margin at the bottom
             educationSection.style.top = "auto";  // Remove fixed top position
             educationSection.style.right = "-3%";  // Remove fixed right position
-            educationSection.style.width = "90%";  // Make the width 90% for mobile
+            educationSection.style.width = "85%";  // Make the width 90% for mobile
             educationSection.style.padding = "20px";  // Adjust padding for mobile
             educationSection.style.borderLeft = "3px solid purple";  // Remove left border for mobile
             educationSection.style.textAlign = "center";  // Center text on mobile
