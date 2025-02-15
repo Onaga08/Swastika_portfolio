@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const educationSection = document.getElementById("education");
-    const timeline_content = document.getElementsByClassName("timeline-content");
+    const timeline_content = document.getElementsByClassName("timeline-item");
 
     // Function to adjust the position based on screen width
     function adjustEducationPosition() {
