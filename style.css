@@ -39,6 +39,7 @@ body {
 
 .navbar nav ul li {
     margin: 0 15px;
+    text-decoration: underline;
 }
 
 .navbar nav ul li a {
@@ -301,13 +302,61 @@ body {
     left: -10px;
     margin: 30px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1150) {
     body {
         background-color: lightblue;
     }
     .timeline-item{
         width: 85%;
     }
+    .navbar {
+        background: #f8f8f8;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+    }
+    
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        margin: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar .logo {
+        font-size: 22px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .navbar nav ul {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .navbar nav ul li {
+        margin: 0 15px;
+        margin-bottom: 20px;
+    }
+    
+    .navbar nav ul li a {
+        text-decoration: none;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+}
+.phone{
+    margin-top: 20px;
 }
 
 
