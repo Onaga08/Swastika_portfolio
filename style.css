@@ -233,6 +233,7 @@ body {
 
 /* Experience Timeline Styling */
 .timeline-line {
+    margin-left: 3px;
     position: absolute;
     left: 10%;
     transform: translateX(-50%);
@@ -301,12 +302,11 @@ body {
     margin: 30px;
 }
 @media only screen and (max-width: 768px) {
-    /* Styles for mobile devices */
     body {
         background-color: lightblue;
     }
     .timeline-item{
-        width: 80%;
+        width: 85%;
     }
 }
 
