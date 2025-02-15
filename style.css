@@ -309,6 +309,17 @@ body {
     .timeline-item{
         width: 85%;
     }
+    .timeline-item:nth-child(0){
+        top: 30px;
+    }
+    
+    .timeline-item:nth-child(1){
+        top: 100px;
+    }
+    
+    .timeline-item:nth-child(2){
+        top: 200px;
+    }
 
 }
 .phone{
